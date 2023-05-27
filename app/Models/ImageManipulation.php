@@ -10,7 +10,19 @@ class ImageManipulation extends Model
     use HasFactory;
 
     const TYPE_RESIZE = 'resize';
+    const TYPE_OPTIMIZE = 'optimize';
+    const TYPE_CONVERSION = 'convert';
+
     const UPDATED_AT = null;
 
-    protected $fillable = ['name', 'path', 'type', 'data', 'output_path', 'user_id', 'album_id'];
+    protected $fillable = [
+        'type',
+        'name',
+        'path',
+        'data',
+        'output_path',
+        'user_id',
+        'album_id'
+    ];
+
 }
